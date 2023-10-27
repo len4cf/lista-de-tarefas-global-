@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+
+body{
+  background-color: #17181f;
+  color: #ddd;
+  font-family: 'Inter', sans-serif;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+.header {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 8rem;
+  
+}
+
+.global-logo {
+
+  width: 40%;
+
+}
+
+.home-divider {
+
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 10rem;
+  gap: 1rem;
+
+}
+
+.nav-bar {
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #30313D;
+  padding: 1rem;
+  margin: 2rem 0;
+
+}
+
+.nav-bar-button {
+
+  background-color: #74AC72;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+  padding: .5rem 1rem;
+  color: #30313D;
+  font-weight: bold;
+  font-size: 1rem;
+
+}
+
+.header-titulo {
+  color: #74AC72;
+}
+
+.success {
+
+  display: flex;
+  gap: 1rem;
+  color: rgb(39,160,59);
+  text-align: center;
+  padding: .625rem;
+  border-radius: .625rem;
+
+}
+
+.listar-progresso {
+
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  font-weight: 400;
+  
+}
+
+.listar-progresso-numero {
+
+  background-color: rgba(116, 172, 114, 0.4);
+  padding: .3125rem;
+  border-radius: .625rem;
+
+}
+
+main{
+  max-width: 18.75rem;
+  margin: 1.25rem auto;
+}
+form{
+  border: .1875rem solid #30313D;
+  border-radius: .625rem;
+  padding: .3125rem;
+  display:flex;
+}
+form input[type="text"] {
+  background: none;
+  color:#fff;
+  border:0;
+  padding: 0 8px;
+  display:block;
+  width: 100%;
+}
+form button{
+  background-color: #74AC72;
+  border:0;
+  border-radius: 6px;
+  cursor:pointer;
+}
+
+div.task{
+  background-color: #30313D;
+  border-radius: 10px;
+  padding: 5px 9px;
+  margin-top: 5px;
+  display:flex;
+  align-items: center;
+  transition: opacity .3s linear;
+}
+div.task svg{
+  height: 20px;
+  margin-right: 6px;
+  fill: #74AC72;
+}
+div.task.done{
+  opacity: 0.3;
+}
+div.task-name, div.task form{
+  flex-grow:1;
+}
+div.task span{
+  position:relative;
+}
+div.task span:before{
+  content:'';
+  display:block;
+  width:0;
+  height:1px;
+  background-color: #ddd;
+  position:absolute;
+  top: 10px;
+  transition: width .1s linear;
+}
+div.task.done span:before{
+  width: 100%;
+}
+
+h1, h2{
+  text-align: center;
+}
+
+div.checkbox{
+  display:flex;
+  align-items: center;
+}
+
+button.trash{
+  background:none;
+  border:none;
+  display:flex;
+  cursor:pointer;
+}
+button.trash svg{
+  fill: #888;
+  height: 14px;
+}
+div.task input{
+  border: 2px solid #555;
+  border-radius:5px;
+  padding: 2px 4px;
+}
+
+@media (max-width: 600px) {
+  .nav-bar {
+    background-color: transparent;
+    display: flex;
+  }
+
+  .nav-bar-button {
+    font-size: .7rem;
+    margin-top: 1rem;
+  }
+
+  main {
+    max-width: 100%; /* Ocupa toda a largura disponível */
+  }
+
+  form {
+    border: 3px solid #30313D;
+    border-radius: 10px;
+    padding: 10px;
+  }
+
+
+}
+
+/* Estilos para telas maiores (mais de 600px de largura) */
+@media (min-width: 601px) {
+  .nav-bar {
+    background-color: transparent;
+    
+  }
+
+  .nav-bar-button {
+    margin-top: 0;
+  }
+
+  main {
+    max-width: 300px;
+    margin: 20px auto;
+  }
+
+  form {
+    display: flex;
+  }
+
+  form input[type="text"] {
+    width: 100%;
+  }
+}
